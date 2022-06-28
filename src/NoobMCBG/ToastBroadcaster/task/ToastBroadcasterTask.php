@@ -1,6 +1,6 @@
 <?php
 
-namespace NoobMCBG\ToastBroadcaster;
+namespace NoobMCBG\ToastBroadcaster\task;
 
 use pocketmine\scheduler\Task;
 use NoobMCBG\ToastBroadcaster\ToastBroadcaster;
