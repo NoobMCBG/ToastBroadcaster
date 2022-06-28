@@ -8,6 +8,7 @@ use pocketmine\player\Player;
 use pocketmine\plugin\PluginBase;
 use pocketmine\network\mcpe\protocol\ToastRequestPacket;
 use NoobMCBG\ToastBroadcaster\task\ToastBroadcasterTask;
+use NoobMCBG\ToastBroadcaster\task\CheckUpdateTask;
 
 class ToastBroadcaster extends PluginBase {
 
