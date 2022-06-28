@@ -12,7 +12,7 @@
 <br>
 ✔️ Create toast style notifications for all your players ✔️
 <br>
-<img src="https://github.com/NoobMCBG/ToastBroadcaster/blob/main/icon.png"/>
+<img src="https://github.com/NoobMCBG/ToastBroadcaster/blob/main/toast.png"/>
 <br>
 
 <img src="https://github.com/NoobMCBG/KillDeathSound/blob/main/rainbow.gif">
