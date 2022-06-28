@@ -19,9 +19,14 @@ class ToastBroadcaster extends PluginBase {
 
 	public function onEnable() : void {
 		$this->saveDefaultConfig();
+		$this->checkUpdate();
 		$this->getScheduler()->scheduleRepeatingTask(new ToastBroadcasterTask($this), 20 * $this->getConfig()->getAll()["broadcast"]["delay"]);
 		self::$instance = $this;
 	}
+	
+	public function checkUpdate(bool $isRetry = false): void {
+            	$this->getServer()->getAsyncPool()->submitTask(new CheckUpdateTask($this->getDescription()->getName(), $this->getDescription()->getVersion()));
+        }
 
 	public function sendToast(Player $player, string $title = "", string $subtitle = ""){
 		$packet = ToastRequestPacket::create(
