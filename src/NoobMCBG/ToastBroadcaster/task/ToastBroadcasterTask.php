@@ -3,6 +3,7 @@
 namespace NoobMCBG\ToastBroadcaster;
 
 use pocketmine\scheduler\Task;
+use NoobMCBG\ToastBroadcaster\ToastBroadcaster;
 
 class ToastBroadcasterTask extends Task {
     
