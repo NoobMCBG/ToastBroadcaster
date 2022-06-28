@@ -22,7 +22,7 @@ class ToastBroadcaster extends PluginBase {
 		self::$instance = $this;
 	}
 
-	public function sendPacket(Player $player, string $title = "", string $subtitle = ""){
+	public function sendToast(Player $player, string $title = "", string $subtitle = ""){
 		$packet = ToastRequestPacket::create(
         	$title,
         	$subtitle
@@ -30,7 +30,7 @@ class ToastBroadcaster extends PluginBase {
 		$player->getNetworkSession()->sendDataPacket($packet);
 	}
 
-	public function broadcastPacket(string $title = "", string $subtitle = ""){
+	public function broadcastToast(string $title = "", string $subtitle = ""){
 		foreach($this->getServer()->getOnlinePlayers() as $player){
 			$packet = ToastRequestPacket::create(
         		$title,
