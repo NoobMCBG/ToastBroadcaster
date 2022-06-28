@@ -6,25 +6,25 @@ use pocketmine\scheduler\Task;
 
 class ToastBroadcasterTask extends Task {
     
-    private ToastBroadcaster $plugin;
+    	private ToastBroadcaster $plugin;
     
-    private $i;
+    	private $i;
     
-    public function __construct(ToastBroadcaster $plugin){
-        $this->plugin = $plugin;
+    	public function __construct(ToastBroadcaster $plugin){
+        	$this->plugin = $plugin;
 		$this->i = 0;
-    }
+    	}
 
-    public function onRun() : void {
-        $title = $this->plugin->getConfig()->get("title");
-        $messages = $this->plugin->getConfig()->getAll()["broadcast"]["message"];
-    	back:
-    	if($this->i < count($messages)){
-    	    $this->plugin->broadcastPacket($title, $messages[$this->i]);
-    	    $this->i++;
-    	}else{
-		    $this->i = 0;
-		    goto back;
+    	public function onRun() : void {
+        	$title = $this->plugin->getConfig()->get("title");
+        	$messages = $this->plugin->getConfig()->getAll()["broadcast"]["message"];
+    		back:
+    		if($this->i < count($messages)){
+    	    		$this->plugin->broadcastToast($title, $messages[$this->i]);
+    	    		$this->i++;
+    		}else{
+		    	$this->i = 0;
+		    	goto back;
 		}
-    }
+    	}
 }
