@@ -1,0 +1,9 @@
+---
+title: "§d[ToastBroadcaster]" # Title toast
+broadcast:
+  delay: 60 # Delay message
+  message: # All message broadcast
+  - "§a1"
+  - "§b2"
+  - "§c3"
+...
