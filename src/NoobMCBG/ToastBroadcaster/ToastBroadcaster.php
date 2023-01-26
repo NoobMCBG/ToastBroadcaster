@@ -21,7 +21,7 @@ class ToastBroadcaster extends PluginBase {
 	public function onEnable() : void {
 		$this->saveDefaultConfig();
 		$this->checkUpdate();
-		$this->getScheduler()->scheduleRepeatingTask(new ToastBroadcasterTask($this), 20 * $this->getConfig()->getAll()["broadcast"]["delay"]);
+		$this->getScheduler()->scheduleRepeatingTask(new ToastBroadcasterTask($this), 20 * (int)$this->getConfig()->getAll()["broadcast"]["delay"]);
 		self::$instance = $this;
 	}
 	
