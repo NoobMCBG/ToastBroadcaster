@@ -18,7 +18,7 @@ class ToastBroadcasterTask extends Task {
 
     	public function onRun() : void {
         	$title = $this->plugin->getConfig()->get("title");
-        	$messages = $this->plugin->getConfig()->getAll()["broadcast"]["message"];
+        	$messages = $this->plugin->getConfig()->getNested("broadcast.message");
     		back:
     		if($this->i < count($messages)){
     	    		$this->plugin->broadcastToast($title, $messages[$this->i]);
