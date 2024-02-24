@@ -18,14 +18,14 @@ class ToastBroadcaster extends PluginBase {
 		return self::$instance;
 	}
 
-	public function onEnable() : void {
+	public function onEnable() : void{
 		$this->saveDefaultConfig();
 		$this->checkUpdate();
 		$this->getScheduler()->scheduleRepeatingTask(new ToastBroadcasterTask($this), 20 * (int)$this->getConfig()->getNested("broadcast.delay"));
 		self::$instance = $this;
 	}
 	
-	public function checkUpdate(bool $isRetry = false): void {
+	public function checkUpdate(bool $isRetry = false): void{
             	$this->getServer()->getAsyncPool()->submitTask(new CheckUpdateTask($this->getDescription()->getName(), $this->getDescription()->getVersion()));
         }
 
