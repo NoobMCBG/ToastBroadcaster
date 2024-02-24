@@ -2,11 +2,9 @@
 name: ToastBroadcaster
 main: NoobMCBG\ToastBroadcaster\ToastBroadcaster
 api:
-- 4.0.0
-version: 1.0.1
-author: NoobMCBG
-description: Create toast style notifications for all your players
-mcpe-protocol:
-- 560
+- 5.0.0
+version: 1.0.2
+author: NoobMCBG, Terpz710
+description: Create toast style notifications for all your player
 website: https://github.com/NoobMCBG/ToastBroadcaster
 ...
